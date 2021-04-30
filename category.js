@@ -12,8 +12,8 @@ category.init(
             autoIncrement: true,
         },
         name: {
-            type: inputTypes.VARCHAR,
-            allowNull: true,
+            type: DataTypes.STRING,
+      allowNull: false,
         },
     },
     {

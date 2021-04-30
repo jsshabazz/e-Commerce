@@ -1,5 +1,5 @@
-const product = require('./category');
-const category = require('./cat');
+const product = require('./product');
+const category = require('./category');
 const productTag = require('./productTag');
 const Tag = require('./Tag');
 
@@ -24,8 +24,8 @@ product.isfor(category, {
   });  
 
 module.exports = {
-    product,
-    category,
-    Tag,
-    productTag,
+  product,
+  category,
+  Tag,
+  productTag,
   };

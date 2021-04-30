@@ -9,3 +9,5 @@
 ##### I have now created my api folder and routes at this point I am completely perpalxed.
 
 ##### created seed routes
+
+###### Edit my routes
