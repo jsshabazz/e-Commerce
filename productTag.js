@@ -13,13 +13,13 @@ router.get('/', async (req, res) => {
 	}
 });
 
-// Fetch a lone traveler
+// Fetch a lone productTags
 router.get('/:id', async (req, res) => {
 	try {
 		const productTag = await product.findByPk(req.params.id, {
 			include: [{model: Location}, {model: Trip}]
 		});
-		if (!travelerData) {
+		if (!tproductTags) {
 			res.status(404).json({ message: 'productTag not found' });
 			return;
 		}
@@ -33,7 +33,7 @@ router.get('/:id', async (req, res) => {
 // Create a new productTag
 router.post('/', async (req, res) => {
 	try {
-		const tproductTaga = await product.create(req.body);
+		const productTaga = await product.create(req.body);
 		res.status(200).json(productTag);
 	}
 	catch (err) {

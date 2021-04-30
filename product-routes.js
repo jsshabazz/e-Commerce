@@ -27,7 +27,7 @@ router.get('/:id', (req, res) => {
       id: req.params.id,
     },
     include: [
-      Category,
+      category,
       {
         model: Tag,
         through: ProductTag,
@@ -69,7 +69,7 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   
-  Product.update(req.body, {
+  product.update(req.body, {
     where: {
       id: req.params.id,
     },
@@ -96,8 +96,8 @@ router.put('/:id', (req, res) => {
         .map(({ id }) => id);
 
       return Promise.all([
-        ProductTag.destroy({ where: { id: productTagsUndue } }),
-        ProductTag.bulkCreate(newProductTags),
+        productTag.destroy({ where: { id: productTagsUndue } }),
+        productTag.bulkCreate(newProductTags),
       ]);
     })
     .then((updatedProductTags) => res.json(updatedProductTags))

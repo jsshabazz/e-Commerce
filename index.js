@@ -1,5 +1,5 @@
-const product = require('./product');
-const category = require('./category');
+const product = require('./category');
+const category = require('./cat');
 const productTag = require('./productTag');
 const Tag = require('./Tag');
 
@@ -12,7 +12,7 @@ product.isfor(category, {
     foreignKey: 'category_id',
   });
 
-  product.variousProducts(Tag, {
+  product.variousproducts(Tag, {
     through: productTag,
     foreignKey: 'product_id',
   });
